@@ -1,4 +1,5 @@
-const os = require('os')
+const os = require('os') // pegando um modulo já existente
+const log = require('./logger') // chamando o modulo criado
 
 
 /*
@@ -29,6 +30,8 @@ setInterval( () => {
     console.clear() //limpar o terminal
     console.log("\n  ----- PC STATS -----\n")   //Impressão normal
     console.table(stats)   //Impressão de tabela
+
+    log(`${JSON.stringify(stats)}\n`)
 
 }, 1000 )
 
